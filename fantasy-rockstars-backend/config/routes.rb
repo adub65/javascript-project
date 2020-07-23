@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get '/test', to: 'application#test'
+  resources :band_members
+  resources :bands
 end

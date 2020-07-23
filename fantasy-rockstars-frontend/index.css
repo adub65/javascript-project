@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: "Comic Sans MS";
+}
+
+#band-header {
+  display: flex;
+  justify-content: center;
+  background: red;
+  height: 11rem;
+  padding: 1rem;
+}
+
+#band-header img {
+  height: 12rem;
+  width: auto;
+}
+
+/* .card {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #e04b52
+}
+
+.band-avatar {
+  justify-self: center;
+  height: 12rem;
+  width: auto;
+} */
+
+button {
+  position: relative;
+  font-family: "Comic Sans MS";
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+}
+
+button:hover {
+  font-family: "Comic Sans MS";
+  background-color: whitesmoke;
+  border: black solid 1px;
+  color: black;
+}
+
+/* .add-band-form {
+  width: 80%
+} */
+
+/* .submit {
+  position: relative;
+  background-color: #e04b52;
+  border-radius: 5px;
+  height: 2rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+  font-family: "Comic Sans MS";
+  margin: 3px;
+}
+
+.submit:hover {
+  background-color: whitesmoke;
+  border: #e04b52 solid 1px;
+  color: #e04b52;
+} */
+
+
+.form-control {
+  border-radius: 5px;
+  height: 3rem;
+  width: 25%;
+  font-size: 18px;
+  font-family: "Comic Sans MS";
+  margin: 3px;
+}

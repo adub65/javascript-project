@@ -5,8 +5,6 @@ class CreateBandMembers < ActiveRecord::Migration[6.0]
       t.string :original_band
       t.string :instrument
       t.integer :skill_points
-      t.references :band, foreign_key: true
-      t.timestamps
     end
   end
 end

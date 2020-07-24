@@ -12,6 +12,60 @@ AllCops:
     - 'config/**/*'
     - 'bin/**'
 
+# Lint/DuplicateElsifCondition:
+#   Enabled: false
+
+# Style/AccessorGrouping:
+#   Enabled: false
+
+# Style/ArrayCoercion:
+#   Enabled: false
+
+# Style/BisectedAttrAccessor:
+#   Enabled: false
+
+# Style/CaseLikeIf:
+#   Enabled: false
+
+# Style/HashAsLastArrayItem:
+#   Enabled: false
+
+# Style/HashLikeCase:
+#   Enabled: false
+
+# Style/RedundantAssignment:
+#   Enabled: false
+
+# Style/RedundantFetchBlock:
+#   Enabled: false
+
+# Style/RedundantFileExtensionInRequire:
+#   Enabled: false
+
+# Performance/AncestorsInclude:
+#   Enabled: false
+
+# Performance/BigDecimalWithNumericArgument:
+#   Enabled: false
+
+# Performance/RedundantSortBlock:
+#   Enabled: false
+
+# Performance/RedundantStringChars:
+#   Enabled: false
+
+# Performance/ReverseFirst:
+#   Enabled: false
+
+# Performance/SortReverse:
+#   Enabled: false
+
+# Performance/Squeeze:
+#   Enabled: false
+
+# Performance/StringInclude:
+#   Enabled: false
+
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
 

@@ -20,17 +20,13 @@ ActiveRecord::Schema.define(version: 2) do
     t.string "original_band"
     t.string "instrument"
     t.integer "skill_points"
-    t.bigint "band_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["band_id"], name: "index_band_members_on_band_id"
   end
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "band_member_id"
+    t.index ["band_member_id"], name: "index_bands_on_band_member_id"
   end
 
-  add_foreign_key "band_members", "bands"
+  add_foreign_key "bands", "band_members"
 end

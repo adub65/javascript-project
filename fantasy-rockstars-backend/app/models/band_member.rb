@@ -1,3 +1,9 @@
 class BandMember < ApplicationRecord
-  belongs_to :band, optional: true
+  has_many :bands
+
+  scope :guitarists, -> { where(instrument: "guitar") }
+  scope :bassists, -> { where(instrument: "bass") }
+  scope :drummers, -> { where(instrument: "drums") }
+  scope :singers, -> { where(instrument: "microphone") }
+  scope :pianists, -> { where(instrument: "piano") }
 end

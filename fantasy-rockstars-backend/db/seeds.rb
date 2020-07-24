@@ -1,5 +1,3 @@
-Band.create(name: "The Moment is Now")
-
 BandMember.create(name: "Brian May", original_band: "Queen", skill_points: 6, instrument: "guitar")
 BandMember.create(name: "Yngwie Malmsteen", original_band: "Yngwie Malmsteen", skill_points: 10, instrument: "guitar")
 BandMember.create(name: "Jimmy Page", original_band: "Led Zepplin", skill_points: 7, instrument: "guitar")

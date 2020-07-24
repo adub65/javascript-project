@@ -19,14 +19,16 @@ function startFantasyBand() {
       name: fantasyBandNameElement.value
     })
   }).then(resp => {
-    return resp.json()
-  }).then(band => {
-    displayBand(band)
-    fantasyBandNameElement.value = ""
-  }).catch(error => {
-    return error.message
+    console.log(resp.json())
   })
 }
+  // }).then(band => {
+  //   // render to DOM
+  //   fantasyBandNameElement.value = ""
+  // }).catch(error => {
+  //   return error.message
+  // })
+
 
   // const addBandMembersButton = document.querySelector("#fantasy-band-button")
   // const bandMembersContainer = document.querySelector(".container")

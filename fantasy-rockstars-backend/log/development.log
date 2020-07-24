@@ -2927,3 +2927,418 @@ Processing by BandsController#create as JSON
 Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 22.7ms | Allocations: 8025)
 
 
+Started GET "/bands" for ::1 at 2020-07-24 08:08:32 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (1.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 39ms (Views: 0.5ms | ActiveRecord: 15.7ms | Allocations: 4972)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3881936363922282015)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBandMembers (2)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[35mDROP TABLE "band_members"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "2"]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3881936363922282015)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3881936363922282015)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBands (1)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "bands"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "1"]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3881936363922282015)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3881936363922282015)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBandMembers (1)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "band_members" ("id" bigserial primary key, "name" character varying, "original_band" character varying, "instrument" character varying, "skill_points" integer)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "1"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBands (2)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "bands" ("id" bigserial primary key, "name" character varying, "guitarist_id" bigint, "bassist_id" bigint, "drummer_id" bigint, "singer_id" bigint, "pianist_id" bigint, CONSTRAINT "fk_rails_e0313f537a"
+FOREIGN KEY ("guitarist_id")
+  REFERENCES "guitarists" ("id")
+, CONSTRAINT "fk_rails_3b64066eea"
+FOREIGN KEY ("bassist_id")
+  REFERENCES "bassists" ("id")
+, CONSTRAINT "fk_rails_166811e12d"
+FOREIGN KEY ("drummer_id")
+  REFERENCES "drummers" ("id")
+, CONSTRAINT "fk_rails_e5763bd1c7"
+FOREIGN KEY ("singer_id")
+  REFERENCES "singers" ("id")
+, CONSTRAINT "fk_rails_de2831355a"
+FOREIGN KEY ("pianist_id")
+  REFERENCES "pianists" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3881936363922282015)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3881936363922282015)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBands (2)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "bands" ("id" bigserial primary key, "name" character varying, "band_member_id" bigint, CONSTRAINT "fk_rails_fe74f46c9f"
+FOREIGN KEY ("band_member_id")
+  REFERENCES "band_members" ("id")
+)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_bands_on_band_member_id" ON "bands"  ("band_member_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "2"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3881936363922282015)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (1.1ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Brian May"], ["original_band", "Queen"], ["instrument", "guitar"], ["skill_points", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.4ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Yngwie Malmsteen"], ["original_band", "Yngwie Malmsteen"], ["instrument", "guitar"], ["skill_points", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jimmy Page"], ["original_band", "Led Zepplin"], ["instrument", "guitar"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Slash"], ["original_band", "Guns and Roses"], ["instrument", "guitar"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Randy Rhoads"], ["original_band", "Ozzy Osbourne"], ["instrument", "guitar"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dimebag Darrell"], ["original_band", "Pantera"], ["instrument", "guitar"], ["skill_points", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Eddie Van Halen"], ["original_band", "Van Halen"], ["instrument", "guitar"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.6ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dave Mustaine"], ["original_band", "Megadeath"], ["instrument", "guitar"], ["skill_points", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Zakk Wylde"], ["original_band", "Zakk Wylde Band"], ["instrument", "guitar"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Synyster Gates"], ["original_band", "Avenged Sevenfold"], ["instrument", "guitar"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tom Araya"], ["original_band", "Slayer"], ["instrument", "bass"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Troy Sanders"], ["original_band", "Mastodon"], ["instrument", "bass"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Flea"], ["original_band", "Red Hot Chilli Peppers"], ["instrument", "bass"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Robert Trujillo"], ["original_band", "Metallica"], ["instrument", "bass"], ["skill_points", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.4ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Les Claypool"], ["original_band", "Primus"], ["instrument", "bass"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "John Myung"], ["original_band", "Dream Theater"], ["instrument", "bass"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Steve Harris"], ["original_band", "Iron Maiden"], ["instrument", "bass"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dan Briggs"], ["original_band", "Between the Buried and Me"], ["instrument", "bass"], ["skill_points", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Paul Gray"], ["original_band", "Slipknot"], ["instrument", "bass"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gene Simmons"], ["original_band", "KISS"], ["instrument", "bass"], ["skill_points", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Travis Barker"], ["original_band", "Blink 182"], ["instrument", "drums"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Alex Van Halen"], ["original_band", "Van Halen"], ["instrument", "drums"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mike Portney"], ["original_band", "Dream Theater"], ["instrument", "drums"], ["skill_points", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Neil Peart"], ["original_band", "Rush"], ["instrument", "drums"], ["skill_points", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chris Adler"], ["original_band", "Lamb of God"], ["instrument", "drums"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Meg White"], ["original_band", "White Stripes"], ["instrument", "drums"], ["skill_points", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Danny Cary"], ["original_band", "Tool"], ["instrument", "drums"], ["skill_points", 9]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Vinnie Paul"], ["original_band", "Pantera"], ["instrument", "drums"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tomas Haak"], ["original_band", "Meshuggah"], ["instrument", "drums"], ["skill_points", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jason Costa"], ["original_band", "All That Remains"], ["instrument", "drums"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Steven Tyler"], ["original_band", "Aerosmith"], ["instrument", "microphone"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rob Halford"], ["original_band", "Judas Priest"], ["instrument", "microphone"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Maynard James Keenan"], ["original_band", "Tool"], ["instrument", "microphone"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Freddy Mercury"], ["original_band", "Queen"], ["instrument", "microphone"], ["skill_points", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mick Jagger"], ["original_band", "The Rolling Stones"], ["instrument", "microphone"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.9ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Stevie Nicks"], ["original_band", "Fleetwood Mac"], ["instrument", "microphone"], ["skill_points", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Paul McCartney"], ["original_band", "The Beatles"], ["instrument", "microphone"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Roger Daltrey"], ["original_band", "The Who"], ["instrument", "microphone"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "John Fogerty"], ["original_band", "Creedence Clearwater Revival"], ["instrument", "microphone"], ["skill_points", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Joan Jett"], ["original_band", "Joan Jett & The Blackhearts"], ["instrument", "microphone"], ["skill_points", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Elton John"], ["original_band", "Elton John"], ["instrument", "piano"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Billy Joel"], ["original_band", "Billy Joel"], ["instrument", "piano"], ["skill_points", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ray Charles"], ["original_band", "Ray Charles"], ["instrument", "piano"], ["skill_points", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.6ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Stevie Wonder"], ["original_band", "Stevie Wonder"], ["instrument", "piano"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jordan Rudus"], ["original_band", "Dream Theater"], ["instrument", "piano"], ["skill_points", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Vadim Pruzhanov"], ["original_band", "DragonForce"], ["instrument", "piano"], ["skill_points", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jon Lord"], ["original_band", "Deep Purple"], ["instrument", "piano"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Janne Wirman"], ["original_band", "Children of Bodom"], ["instrument", "piano"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Christian Flake Lorenz"], ["original_band", "Elton John"], ["instrument", "piano"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Michael Pinella"], ["original_band", "Symphony X"], ["instrument", "piano"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."instrument" = $1 LIMIT $2[0m  [["instrument", "guitar"], ["LIMIT", 11]]
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."instrument" = $1 LIMIT $2[0m  [["instrument", "guitar"], ["LIMIT", 11]]
+  [1m[36mBandMember Load (1.0ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."instrument" = $1 ORDER BY "band_members"."id" DESC LIMIT $2[0m  [["instrument", "guitar"], ["LIMIT", 1]]
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."instrument" = $1 ORDER BY "band_members"."id" DESC LIMIT $2[0m  [["instrument", "guitar"], ["LIMIT", 1]]
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."instrument" = $1[0m  [["instrument", "guitar"]]
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."instrument" = $1[0m  [["instrument", "guitar"]]
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."instrument" = $1[0m  [["instrument", "guitar"]]
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."instrument" = $1[0m  [["instrument", "guitar"]]
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."instrument" = $1[0m  [["instrument", "guitar"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "OMG"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+Started POST "/bands" for ::1 at 2020-07-24 10:51:57 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for BandsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/bands" for ::1 at 2020-07-24 10:53:15 -0400
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for BandsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/bands" for ::1 at 2020-07-24 10:54:25 -0400
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 4394)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-24 10:54:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/bands" for ::1 at 2020-07-24 10:54:42 -0400
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for BandsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'

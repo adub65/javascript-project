@@ -21,13 +21,27 @@ function startFantasyBand() {
   }).then(resp => {
     return resp.json()
   }).then(band => {
-    selectBandMembers(band)
+    displayBand(band)
     fantasyBandNameElement.value = ""
   }).catch(error => {
     return error.message
   })
 }
 
-function selectBandMembers(band) {
-  console.log(band)
-}
+  // const addBandMembersButton = document.querySelector("#fantasy-band-button")
+  // const bandMembersContainer = document.querySelector(".container")
+
+  // fetch("http://localhost:3000/band_members").then(resp => {
+  //   return resp.json()
+  // })
+
+  // addBandMembersButton.addEventListener("click", () => {
+
+//   let addBandMembers = false
+//   if (addBandMembers) {
+//     bandMembersContainer.style.display = "none"
+//   }
+//   else {
+//     bandMembersContainer.style.display = "block"
+//   }
+// }

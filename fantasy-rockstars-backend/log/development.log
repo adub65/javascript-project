@@ -2545,3 +2545,385 @@ Processing by BandsController#index as */*
 Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 807)
 
 
+Started GET "/bands" for ::1 at 2020-07-23 19:56:07 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as */*
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 22.8ms | Allocations: 4858)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 19:58:12 -0400
+Processing by BandsController#index as */*
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 767)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 19:58:15 -0400
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for BandsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/bands" for ::1 at 2020-07-23 19:58:22 -0400
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 747)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 19:58:36 -0400
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 747)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 20:16:50 -0400
+Processing by BandsController#index as */*
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 4046)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 20:17:01 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>{}, "band"=>{"name"=>{}}}
+Started GET "/bands" for ::1 at 2020-07-23 20:18:52 -0400
+[31mUnpermitted parameter: :name[0m
+  [1m[35m (10.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Create (0.6ms)[0m  [1m[32mINSERT INTO "bands" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-07-24 00:19:29.670322"], ["updated_at", "2020-07-24 00:19:29.670322"]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+Completed 204 No Content in 148187ms (ActiveRecord: 12.6ms | Allocations: 21544)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 20:19:29 -0400
+Processing by BandsController#index as */*
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 30.3ms | Allocations: 4339)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 20:19:29 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>{}, "band"=>{"name"=>{}}}
+Processing by BandsController#index as */*
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 4.3ms | Allocations: 3193)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 20:19:40 -0400
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 810)
+
+
+Completed 204 No Content in 90306ms (ActiveRecord: 2.4ms | Allocations: 15327)
+
+
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (6.4ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (3.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.5ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (10.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/bands" for ::1 at 2020-07-23 20:36:51 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"In This Moment", "band"=>{"name"=>"In This Moment"}}
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (pry):6:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):8:in `create'
+  [1m[36mBand Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "In This Moment"], ["LIMIT", 1]]
+  ↳ (pry):8:in `create'
+  [1m[36mBand Create (15.7ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "In This Moment"], ["created_at", "2020-07-24 00:39:11.276618"], ["updated_at", "2020-07-24 00:39:11.276618"]]
+  ↳ (pry):8:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (pry):8:in `create'
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (pry):9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):9:in `create'
+  [1m[36mBand Destroy (1.2ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 3]]
+  ↳ (pry):9:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (pry):9:in `create'
+Completed 204 No Content in 187554ms (ActiveRecord: 41.2ms | Allocations: 57394)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 20:51:20 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 2319)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 20:51:34 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"MegaGODS", "band"=>{"name"=>"MegaGODS"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:10:in `create'
+  [1m[36mBand Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10:in `create'
+  [1m[36mBand Create (0.4ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "MegaGODS"], ["created_at", "2020-07-24 00:51:34.787775"], ["updated_at", "2020-07-24 00:51:34.787775"]]
+  ↳ app/controllers/bands_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:10:in `create'
+Completed 204 No Content in 11ms (ActiveRecord: 4.7ms | Allocations: 6739)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 20:52:17 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"MegaGODS", "band"=>{"name"=>"MegaGODS"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:10:in `create'
+  [1m[36mBand Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:10:in `create'
+Completed 204 No Content in 6ms (ActiveRecord: 0.5ms | Allocations: 4202)
+
+
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBand Load (3.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBand Load (3.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (1.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/bands" for ::1 at 2020-07-23 21:02:06 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"MegaGODS", "band"=>{"name"=>"MegaGODS"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Create (0.8ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "MegaGODS"], ["created_at", "2020-07-24 01:02:06.204334"], ["updated_at", "2020-07-24 01:02:06.204334"]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 25.4ms | Allocations: 6890)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 21:03:18 -0400
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 21:05:42 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"MegaGODS", "band"=>{"name"=>"MegaGODS"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 4237)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 21:06:14 -0400
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 766)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 21:08:37 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 8.1ms | Allocations: 5019)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 21:08:46 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"MegaGODS", "band"=>{"name"=>"MegaGODS"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 4804)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 21:11:55 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"MegaGODS", "band"=>{"name"=>"MegaGODS"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):2:in `create'
+  [1m[36mBand Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ (pry):2:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (pry):2:in `create'
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):8:in `create'
+  [1m[36mBand Exists? (16.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ (pry):8:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (pry):8:in `create'
+  [1m[36mBand Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ (pry):17:in `create'
+  [1m[36mCACHE Band Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:12:in `create'
+Completed 500 Internal Server Error in 233435ms (Views: 0.2ms | ActiveRecord: 25.1ms | Allocations: 135822)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/bands_controller.rb:17:in `create'
+Started POST "/bands" for ::1 at 2020-07-23 21:16:26 -0400
+  [1m[35m (17.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"MegaGODS", "band"=>{"name"=>"MegaGODS"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Exists? (15.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ (pry):2:in `create'
+Completed 500 Internal Server Error in 142362ms (Views: 0.2ms | ActiveRecord: 23.4ms | Allocations: 29192)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/bands_controller.rb:17:in `create'
+Started GET "/bands" for ::1 at 2020-07-23 21:40:34 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 5.9ms | Allocations: 4971)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 21:40:41 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"MegaGODS", "band"=>{"name"=>"MegaGODS"}}
+  [1m[35m (14.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+Completed 200 OK in 6205ms (Views: 0.2ms | ActiveRecord: 15.1ms | Allocations: 19161)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 21:41:08 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"All American Rejects", "band"=>{"name"=>"All American Rejects"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "All American Rejects"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Create (0.6ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "All American Rejects"], ["created_at", "2020-07-24 01:41:08.100331"], ["updated_at", "2020-07-24 01:41:08.100331"]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 3720)
+
+
+Started GET "/bands" for ::1 at 2020-07-23 21:42:33 -0400
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 817)
+
+
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.8ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/bands" for ::1 at 2020-07-23 22:01:26 -0400
+  [1m[35m (16.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 2330)
+
+
+Started POST "/bands" for ::1 at 2020-07-23 22:02:02 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"MegaGODS", "band"=>{"name"=>"MegaGODS"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "MegaGODS"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[36mBand Create (16.8ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "MegaGODS"], ["created_at", "2020-07-24 02:02:02.541250"], ["updated_at", "2020-07-24 02:02:02.541250"]]
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:11:in `create'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 22.7ms | Allocations: 8025)
+
+

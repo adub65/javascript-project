@@ -3,33 +3,31 @@ const bandForm = document.querySelector("#band-form")
 
 bandForm.addEventListener("submit", event => {
   event.preventDefault()
-  createBand()
+  startFantasyBand()
 })
 
-fetch("http://localhost:3000/bands").then(function(resp) {
-  return resp.json()
-}).then(function(bands) {
-  for (const band of bands) {
-  appendBand(band)
-  }
-})
+function startFantasyBand() {
+  const fantasyBandNameElement = document.querySelector("#add-band-input")
 
-function appendBand(band) {
-  const bandElement = document.createElement("li")
-  bandElement.classList.add("list-group-item")
-  bandElement.id = `band-${band.id}`
-  bandElement.innerHTML = `<span>${band.name}</span>`
-  console.log(bandElement)
-  bandList.appendChild(bandElement)
-  bandElement.addEventListener("click", listenForBandClick)
+  fetch("http://localhost:3000/bands", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify( {
+      name: fantasyBandNameElement.value
+    })
+  }).then(resp => {
+    return resp.json()
+  }).then(band => {
+    selectBandMembers(band)
+    fantasyBandNameElement.value = ""
+  }).catch(error => {
+    return error.message
+  })
 }
 
-function listenForBandClick(event) {
-  console.log(event)
-  const bandId = event.path[1].id.split("-")[2]
-  fetch(`http://localhost:3000/bands/${bandId}`)
-    .then(function(resp) {
-      return resp.json()
-    })
-    .then(displayBandDetails)
+function selectBandMembers(band) {
+  console.log(band)
 }

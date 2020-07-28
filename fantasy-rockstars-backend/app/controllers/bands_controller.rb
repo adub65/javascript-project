@@ -4,6 +4,11 @@ class BandsController < ApplicationController
     render json: bands.to_json()
   end
 
+  def show
+    band = Band.find_by(name: params[:id]) # a little confusing 
+    render json: fantasy_band(band)
+  end
+
   def create
     band = Band.new(band_params)
     if band.save

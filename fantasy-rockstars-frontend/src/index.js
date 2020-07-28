@@ -5,27 +5,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const bandMembersContainer = document.querySelector(".all-band-members-container")
   const bandForm = document.querySelector("#band-form")
 
-  startBandButton.addEventListener("click", (event) => {
-    event.preventDefault()
-    startBand = !startBand
-    if (startBand) {
-      bandMembersContainer.style.display = "block"
-    } else {
-      bandMembersContainer.style.display = "none"
-    }
-  })
-
   bandForm.addEventListener("submit", (event) => {
     event.preventDefault()
     submitBandForScore()
   })
 
-  fetch("http://localhost:3000/band_members").then( resp => {
-    return resp.json()
-  }).then( band_members => {
-    selectFantasyBand(band_members)
+  startBandButton.addEventListener("click", (event) => {
+    event.preventDefault()
+    const bandName = document.querySelector("#band-name").value
+    if (bandName == "") {
+      alert("You must enter your band name first!")
+      return false
+    } else {
+      searchForExistingBand(bandName)
+    }
   })
 
+  function searchForExistingBand(bandName) {
+    fetch(`http://localhost:3000/bands/${bandName}`)
+    .then((resp) => resp.json())
+    .then((band) => {
+      if(band){
+        displayBandScore(band)
+      } else {
+        startNewBand()
+      }
+    })
+  }
+
+  function startNewBand() {
+  startBand = !startBand
+    if (startBand) {
+      bandMembersContainer.style.display = "block"
+    } else {
+      bandMembersContainer.style.display = "none"
+    }
+    fetch("http://localhost:3000/band_members").then( resp => {
+      return resp.json()
+    }).then( band_members => {
+      selectFantasyBand(band_members)
+      // newFantasyBand()
+    })
+  }
 })
 
 function selectFantasyBand(band_members) {
@@ -86,11 +107,13 @@ function displayBandScore(band) {
     <p>${band.drummer.name} (from ${band.drummer.original_band})</p>
   </ol>
   <button id="edit-fantasy-band"> Edit Band </button>
+  <button id="create-new-band"> Create New Band </button>
   `
   const bandDetails = document.querySelector("#fantasy-band-display")
   bandDetails.innerHTML = ""
   bandDetails.appendChild(bandDisplay)
   listenToEditBandButton(band)
+  // listenToCreateNewBandButton()
 }
 
 function listenToEditBandButton(band) {
@@ -98,6 +121,11 @@ function listenToEditBandButton(band) {
   updateFantasyBandButton.addEventListener("click", () => editFantasyBand(band))
 }
 
+// function   listenToCreateNewBandButton() {
+//   const createNewFantasyBandButton = document.querySelector("#create-new-band")
+//   createNewFantasyBandButton.addEventListener("click", () => newFantasyBand())
+// }
+
 function editFantasyBand(band) {
-  
+  console.log(band)
 }

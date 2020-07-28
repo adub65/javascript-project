@@ -12,35 +12,55 @@
       <img src="https://pngimg.com/uploads/rock_music/rock_music_PNG27.png">
     </div>
 
-    <div class="form-group">
-      <form id="band-form">
-        <input class="form-control" type="text" id="add-band-input"
-          placeholder="Enter Band Name...">
-        <button class="start-band-button" type="submit" name="start-band-button">Start Your Fantasy Band</button>
+    <div class="start-band">
+      <form id="band_name_form">
+        <input id="band-name" class="form-control" type="text" placeholder="Enter Band Name...">
+        <button id="name-and-select-band-button">Select Your Fantasy Band</button>
       </form>
     </div>
 
+    <form id="band-form">
+      <div class='all-band-members-container' style="display: none">
+        <div>
+          <label>Guitarist:</label><br>
+          <select id="guitar-select" name="guitarist">
+            <option value="">Select Your Guitar Player</option>
+          </select><br><br>
+        </div>
 
-    <div hidden="hidden" class='all-band-members-container'>
-      <p style="text-align:center">
-        <button id="fantasy-band-button">Select Your Band Members</button>
-      </p>
-      <div id= guitar-select>
-        <select>ALL THE GUITAR PLAYERS</select>
+        <div>
+          <label>Bassist:</label><br>
+          <select id="bass-select" name="bassist">
+            <option value="">Select Your Bass Player</option>
+          </select><br><br>
+        </div>
+
+        <div>
+          <label>Drummer:</label><br>
+          <select id="drums-select" name="drummer">
+            <option value="">Select Your Drummer</option>
+          </select><br><br>
+        </div>
+
+        <div>
+          <label>Singer:</label><br>
+          <select id="microphone-select" name="singer">
+            <option value="">Select Your Singer</option>
+          </select><br><br>
+        </div>
+
+        <div>
+          <label>Pianist:</label><br>
+          <select id="piano-select" name="pianist">
+            <option value="">Select Your Pianist</option>
+          </select><br><br>
+        </div>
+
+        <p style="text-align: center">
+          <button type="submit" id="get-fantasy-band-score-button">See Your Fantasy Band Score</button>
+        </p>
       </div>
-      <div id= bass-select>
-        <select>ALL THE BASS PLAYERS</select>
-      </div>
-      <div id= drums-select>
-        <select>ALL THE DRUMERS</select>
-      </div>
-      <div id= microphone-select>
-        <select>ALL THE SINGERS</select>
-      </div>
-      <div id= piano-select>
-        <select>ALL THE PIANO PLAYERS</select>
-      </div>
-    </div>
+    </form>
 
   </body>
   <script type="application/javascript" src="src/index.js"></script>

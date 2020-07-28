@@ -24,9 +24,11 @@ ActiveRecord::Schema.define(version: 2) do
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
-    t.bigint "band_member_id"
-    t.index ["band_member_id"], name: "index_bands_on_band_member_id"
+    t.integer "guitarist_id"
+    t.integer "bassist_id"
+    t.integer "pianist_id"
+    t.integer "drummer_id"
+    t.integer "singer_id"
   end
 
-  add_foreign_key "bands", "band_members"
 end

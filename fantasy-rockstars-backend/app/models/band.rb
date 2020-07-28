@@ -7,6 +7,10 @@ class Band < ApplicationRecord
 
   validates :name, presence: true
   validates :name, uniqueness: true
+
+  def total_band_skill
+    bassist.skill_points + guitarist.skill_points + pianist.skill_points + drummer.skill_points + singer.skill_points
+  end
 end
 
 

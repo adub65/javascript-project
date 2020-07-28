@@ -5816,3 +5816,113 @@ Processing by BandsController#index as HTML
 Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1749)
 
 
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.4ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 11]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/band_members" for ::1 at 2020-07-27 22:13:50 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandMembersController#index as */*
+  [1m[36mBandMember Load (0.6ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members"[0m
+  ↳ app/controllers/band_members_controller.rb:3:in `group_by'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 6.5ms | Allocations: 9723)
+
+
+Started POST "/bands" for ::1 at 2020-07-27 22:14:30 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"Aaron's Band", "guitarist_id"=>"10", "bassist_id"=>"13", "drummer_id"=>"23", "singer_id"=>"31", "pianist_id"=>"41", "band"=>{"name"=>"Aaron's Band", "guitarist_id"=>"10", "bassist_id"=>"13", "pianist_id"=>"41", "drummer_id"=>"23", "singer_id"=>"31"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 13], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 23], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 31], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 41], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBand Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBand Create (0.6ms)[0m  [1m[32mINSERT INTO "bands" ("name", "guitarist_id", "bassist_id", "pianist_id", "drummer_id", "singer_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Aaron's Band"], ["guitarist_id", 10], ["bassist_id", 13], ["pianist_id", 41], ["drummer_id", 23], ["singer_id", 31]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 7.8ms | Allocations: 16670)
+
+
+Started GET "/band_members" for ::1 at 2020-07-27 22:15:19 -0400
+Processing by BandMembersController#index as */*
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members"[0m
+  ↳ app/controllers/band_members_controller.rb:3:in `group_by'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 5.2ms | Allocations: 8979)
+
+
+Started POST "/bands" for ::1 at 2020-07-27 22:15:54 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"Alyssa's Band", "guitarist_id"=>"1", "bassist_id"=>"16", "drummer_id"=>"22", "singer_id"=>"35", "pianist_id"=>"50", "band"=>{"name"=>"Alyssa's Band", "guitarist_id"=>"1", "bassist_id"=>"16", "pianist_id"=>"50", "drummer_id"=>"22", "singer_id"=>"35"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 1], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 16], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 22], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 50], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBand Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Alyssa's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[36mBand Create (0.4ms)[0m  [1m[32mINSERT INTO "bands" ("name", "guitarist_id", "bassist_id", "pianist_id", "drummer_id", "singer_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Alyssa's Band"], ["guitarist_id", 1], ["bassist_id", 16], ["pianist_id", 50], ["drummer_id", 22], ["singer_id", 35]]
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:9:in `create'
+Completed 200 OK in 45ms (Views: 0.1ms | ActiveRecord: 6.3ms | Allocations: 14895)
+
+

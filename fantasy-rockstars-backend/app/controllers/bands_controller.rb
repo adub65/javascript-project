@@ -25,19 +25,19 @@ private
       only: [:id, :name, :total_band_skill],
       include: {
         guitarist: {
-          only: [:name]
+          only: [:name, :original_band]
         },
         bassist: {
-          only: [:name]
+          only: [:name, :original_band]
         },
         drummer: {
-          only: [:name]
+          only: [:name, :original_band]
         },
         singer: {
-          only: [:name]
+          only: [:name, :original_band]
         },
         pianist: {
-          only: [:name]
+          only: [:name, :original_band]
         }
       }
     )

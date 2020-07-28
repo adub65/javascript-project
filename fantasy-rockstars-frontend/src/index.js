@@ -67,4 +67,37 @@ function submitBandForScore() {
     displayBandScore(band)
   })
 }
-// fantasyBandNameElement.value = ""
+
+function displayBandScore(band) {
+  const bandDisplay = document.createElement("div")
+  bandDisplay.classList.add("bandDisplay")
+  bandDisplay.id = `${band.id}`
+  bandDisplay.innerHTML = `
+  <h1>${band.name}</h1>
+  <h2>Your Fantasy Band Score: ${band.total_band_skill} </h2>
+  <h3>
+    <u>Band Members</u>
+  </h3>
+  <ol>
+    <p>${band.guitarist.name} (from ${band.guitarist.original_band})</p>
+    <p>${band.bassist.name} (from ${band.bassist.original_band})</p>
+    <p>${band.pianist.name} (from ${band.pianist.original_band})</p>
+    <p>${band.singer.name} (from ${band.singer.original_band})</p>
+    <p>${band.drummer.name} (from ${band.drummer.original_band})</p>
+  </ol>
+  <button id="edit-fantasy-band"> Edit Band </button>
+  `
+  const bandDetails = document.querySelector("#fantasy-band-display")
+  bandDetails.innerHTML = ""
+  bandDetails.appendChild(bandDisplay)
+  listenToEditBandButton(band)
+}
+
+function listenToEditBandButton(band) {
+  const updateFantasyBandButton = document.querySelector("#edit-fantasy-band")
+  updateFantasyBandButton.addEventListener("click", () => editFantasyBand(band))
+}
+
+function editFantasyBand(band) {
+  
+}

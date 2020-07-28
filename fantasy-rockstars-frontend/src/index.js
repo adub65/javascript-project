@@ -30,7 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if(band){
         displayBandScore(band)
       } else {
+        let recentBandDisplay = document.querySelector(".bandDisplay")
         startNewBand()
+        recentBandDisplay.innerHTML = ""
       }
     })
   }

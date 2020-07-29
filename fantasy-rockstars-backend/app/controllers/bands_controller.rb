@@ -5,7 +5,7 @@ class BandsController < ApplicationController
   end
 
   def show
-    band = Band.find_by(name: params[:id]) # a little confusing 
+    band = Band.find_by(name: params[:id]) # a little confusing
     render json: fantasy_band(band)
   end
 
@@ -16,6 +16,12 @@ class BandsController < ApplicationController
     else
       render json: { error: "Band not created :(" }
     end
+  end
+
+  def destroy
+    band = Band.find(params[:id])
+    band.destroy
+    render json: band.to_json()
   end
 
 private

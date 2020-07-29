@@ -9264,3 +9264,812 @@ Processing by BandsController#show as */*
 Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 5733)
 
 
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 08:10:09 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.6ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 16], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 41], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (1.0ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 34], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 14.1ms | Allocations: 18867)
+
+
+Started GET "/bands/Sixth%20Band" for ::1 at 2020-07-29 08:10:16 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Sixth Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 16], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 41], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 34], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 5862)
+
+
+Started GET "/bands/Fifth%20Band" for ::1 at 2020-07-29 08:10:20 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Fifth Band"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 16], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 41], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (2.8ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 34], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 3.7ms | Allocations: 5862)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 08:10:37 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 16], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 41], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 34], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 56ms (Views: 0.1ms | ActiveRecord: 11.4ms | Allocations: 16175)
+
+
+Started GET "/bands/Sixth%20Band" for ::1 at 2020-07-29 08:10:42 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Sixth Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Sixth Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 17], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 5], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 24], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 33], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5752)
+
+
+Started GET "/bands/Fifth%20Band" for ::1 at 2020-07-29 08:10:47 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Fifth Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Fifth Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 14], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 4], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 43], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.6ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 23], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 34], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 5733)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 08:11:04 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 2802)
+
+
+Started GET "/band_members" for ::1 at 2020-07-29 08:11:04 -0400
+Processing by BandMembersController#index as */*
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members"[0m
+  ↳ app/controllers/band_members_controller.rb:3:in `group_by'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 6.8ms | Allocations: 8809)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 08:11:16 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 16], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 41], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (1.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 34], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 11.4ms | Allocations: 16095)
+
+
+Started GET "/bands/woot" for ::1 at 2020-07-29 08:11:22 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"woot"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "woot"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 639)
+
+
+Started GET "/band_members" for ::1 at 2020-07-29 08:11:22 -0400
+Processing by BandMembersController#index as */*
+  [1m[36mBandMember Load (0.8ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members"[0m
+  ↳ app/controllers/band_members_controller.rb:3:in `group_by'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 4711)
+
+
+Started POST "/bands" for ::1 at 2020-07-29 08:12:00 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"Woot", "guitarist_id"=>"9", "bassist_id"=>"15", "drummer_id"=>"29", "singer_id"=>"40", "pianist_id"=>"50", "band"=>{"name"=>"Woot", "guitarist_id"=>"9", "bassist_id"=>"15", "pianist_id"=>"50", "drummer_id"=>"29", "singer_id"=>"40"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 9], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 15], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 29], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 40], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 50], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBand Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Woot"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBand Create (1.7ms)[0m  [1m[32mINSERT INTO "bands" ("name", "guitarist_id", "bassist_id", "pianist_id", "drummer_id", "singer_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Woot"], ["guitarist_id", 9], ["bassist_id", 15], ["pianist_id", 50], ["drummer_id", 29], ["singer_id", 40]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 3.9ms | Allocations: 10920)
+
+
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (2.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (1.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 27]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBand Load (1.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" ORDER BY "bands"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3881936363922282015)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBands (2)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.2ms)[0m  [1m[35mDROP TABLE "bands"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "2"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3881936363922282015)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3881936363922282015)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBandMembers (1)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "band_members"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "1"]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3881936363922282015)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3881936363922282015)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3881936363922282015)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3881936363922282015)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBandMembers (1)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "band_members" ("id" bigserial primary key, "name" character varying, "original_band" character varying, "instrument" character varying, "skill_points" integer)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "1"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBands (2)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "bands" ("id" bigserial primary key, "name" character varying, "guitarist_id" integer, "bassist_id" integer, "pianist_id" integer, "drummer_id" integer, "singer_id" integer)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "2"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3881936363922282015)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.8ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Brian May"], ["original_band", "Queen"], ["instrument", "guitar"], ["skill_points", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Yngwie Malmsteen"], ["original_band", "Yngwie Malmsteen"], ["instrument", "guitar"], ["skill_points", 10]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jimmy Page"], ["original_band", "Led Zepplin"], ["instrument", "guitar"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Slash"], ["original_band", "Guns N' Roses"], ["instrument", "guitar"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.4ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jimmy Hendrix"], ["original_band", "Jimmy Hendrix"], ["instrument", "guitar"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dimebag Darrell"], ["original_band", "Pantera"], ["instrument", "guitar"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Eddie Van Halen"], ["original_band", "Van Halen"], ["instrument", "guitar"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dave Mustaine"], ["original_band", "Megadeath"], ["instrument", "guitar"], ["skill_points", 6]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Zakk Wylde"], ["original_band", "Zakk Wylde Band"], ["instrument", "guitar"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Synyster Gates"], ["original_band", "Avenged Sevenfold"], ["instrument", "guitar"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tom Araya"], ["original_band", "Slayer"], ["instrument", "bass"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Troy Sanders"], ["original_band", "Mastodon"], ["instrument", "bass"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Flea"], ["original_band", "Red Hot Chilli Peppers"], ["instrument", "bass"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Robert Trujillo"], ["original_band", "Metallica"], ["instrument", "bass"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Les Claypool"], ["original_band", "Primus"], ["instrument", "bass"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "John Myung"], ["original_band", "Dream Theater"], ["instrument", "bass"], ["skill_points", 9]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Steve Harris"], ["original_band", "Iron Maiden"], ["instrument", "bass"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dan Briggs"], ["original_band", "Between the Buried and Me"], ["instrument", "bass"], ["skill_points", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Paul Gray"], ["original_band", "Slipknot"], ["instrument", "bass"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lemmy"], ["original_band", "Motorhead"], ["instrument", "bass"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Travis Barker"], ["original_band", "Blink 182"], ["instrument", "drums"], ["skill_points", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Alex Van Halen"], ["original_band", "Van Halen"], ["instrument", "drums"], ["skill_points", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.8ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mike Portney"], ["original_band", "Dream Theater"], ["instrument", "drums"], ["skill_points", 10]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Neil Peart"], ["original_band", "Rush"], ["instrument", "drums"], ["skill_points", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chris Adler"], ["original_band", "Lamb of God"], ["instrument", "drums"], ["skill_points", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "John Bonham"], ["original_band", "Led Zepplin"], ["instrument", "drums"], ["skill_points", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.5ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Joey Jordison"], ["original_band", "Slipknot"], ["instrument", "drums"], ["skill_points", 9]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Vinnie Paul"], ["original_band", "Pantera"], ["instrument", "drums"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tomas Haak"], ["original_band", "Meshuggah"], ["instrument", "drums"], ["skill_points", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jason Costa"], ["original_band", "All That Remains"], ["instrument", "drums"], ["skill_points", 9]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Paul McCartney"], ["original_band", "The Beatles"], ["instrument", "microphone"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Axl Rose"], ["original_band", "Guns N' Roses"], ["instrument", "microphone"], ["skill_points", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Steven Tyler"], ["original_band", "Aerosmith"], ["instrument", "microphone"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.4ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rob Halford"], ["original_band", "Judas Priest"], ["instrument", "microphone"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Amy Lee"], ["original_band", "Evanescence"], ["instrument", "microphone"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Freddy Mercury"], ["original_band", "Queen"], ["instrument", "microphone"], ["skill_points", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mick Jagger"], ["original_band", "The Rolling Stones"], ["instrument", "microphone"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Stevie Nicks"], ["original_band", "Fleetwood Mac"], ["instrument", "microphone"], ["skill_points", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ozzy Osbourne"], ["original_band", "Black Sabbath"], ["instrument", "microphone"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chester Bennington"], ["original_band", "Linkin Park"], ["instrument", "microphone"], ["skill_points", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Richard Wright"], ["original_band", "Pink Floyd"], ["instrument", "piano"], ["skill_points", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Elton John"], ["original_band", "Elton John"], ["instrument", "piano"], ["skill_points", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Michael Pinella"], ["original_band", "Symphony X"], ["instrument", "piano"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Janne Wirman"], ["original_band", "Children of Bodom"], ["instrument", "piano"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.3ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ray Charles"], ["original_band", "Ray Charles"], ["instrument", "piano"], ["skill_points", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Vadim Pruzhanov"], ["original_band", "DragonForce"], ["instrument", "piano"], ["skill_points", 9]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jon Lord"], ["original_band", "Deep Purple"], ["instrument", "piano"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Billy Joel"], ["original_band", "Billy Joel"], ["instrument", "piano"], ["skill_points", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jordan Rudus"], ["original_band", "Dream Theater"], ["instrument", "piano"], ["skill_points", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBandMember Create (0.2ms)[0m  [1m[32mINSERT INTO "band_members" ("name", "original_band", "instrument", "skill_points") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Stevie Wonder"], ["original_band", "Stevie Wonder"], ["instrument", "piano"], ["skill_points", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 09:15:51 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 3656)
+
+
+Started GET "/band_members" for ::1 at 2020-07-29 09:15:51 -0400
+Processing by BandMembersController#index as */*
+  [1m[36mBandMember Load (1.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members"[0m
+  ↳ app/controllers/band_members_controller.rb:3:in `group_by'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 6.9ms | Allocations: 9367)
+
+
+Started POST "/bands" for ::1 at 2020-07-29 09:16:36 -0400
+Processing by BandsController#create as JSON
+  Parameters: {"name"=>"Aaron's Band", "guitarist_id"=>"10", "bassist_id"=>"18", "drummer_id"=>"30", "singer_id"=>"35", "pianist_id"=>"49", "band"=>{"name"=>"Aaron's Band", "guitarist_id"=>"10", "bassist_id"=>"18", "pianist_id"=>"49", "drummer_id"=>"30", "singer_id"=>"35"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBand Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[36mBand Create (0.6ms)[0m  [1m[32mINSERT INTO "bands" ("name", "guitarist_id", "bassist_id", "pianist_id", "drummer_id", "singer_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Aaron's Band"], ["guitarist_id", 10], ["bassist_id", 18], ["pianist_id", 49], ["drummer_id", 30], ["singer_id", 35]]
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:14:in `create'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 5.9ms | Allocations: 17605)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 09:43:27 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.5ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 46ms (Views: 0.1ms | ActiveRecord: 14.7ms | Allocations: 18875)
+
+
+Started GET "/bands/Another%20Band" for ::1 at 2020-07-29 09:43:34 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Another Band"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Another Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 656)
+
+
+Started GET "/band_members" for ::1 at 2020-07-29 09:43:34 -0400
+Processing by BandMembersController#index as */*
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members"[0m
+  ↳ app/controllers/band_members_controller.rb:3:in `group_by'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 4707)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 09:49:25 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5755)
+
+
+Started GET "/bands/Another%20Band" for ::1 at 2020-07-29 09:49:31 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Another Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Another Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 655)
+
+
+Started GET "/band_members" for ::1 at 2020-07-29 09:49:31 -0400
+Processing by BandMembersController#index as */*
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members"[0m
+  ↳ app/controllers/band_members_controller.rb:3:in `group_by'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 4682)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:07:33 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.9ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.6ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 16.0ms | Allocations: 18875)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:08:39 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.5ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 5754)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:09:18 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5754)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:13:30 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.5ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 5754)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:16:24 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 5735)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:19:16 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 5735)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:20:25 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (1.0ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 5735)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:22:47 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 5754)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:23:15 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.8ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 5735)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:24:28 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5735)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:25:16 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5735)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:25:38 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 5735)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:28:32 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 5735)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:29:17 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 5735)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:32:31 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.3ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.4ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 5739)
+
+
+Started GET "/bands/Aaron's%20Band" for ::1 at 2020-07-29 10:33:04 -0400
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"Aaron's Band"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Aaron's Band"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:8:in `show'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 18], ["instrument", "bass"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 10], ["instrument", "guitar"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.1ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 49], ["instrument", "piano"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 30], ["instrument", "drums"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+  [1m[36mBandMember Load (0.2ms)[0m  [1m[34mSELECT "band_members".* FROM "band_members" WHERE "band_members"."id" = $1 AND "band_members"."instrument" = $2 LIMIT $3[0m  [["id", 35], ["instrument", "microphone"], ["LIMIT", 1]]
+  ↳ app/models/band.rb:12:in `total_band_skill'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 5735)
+
+

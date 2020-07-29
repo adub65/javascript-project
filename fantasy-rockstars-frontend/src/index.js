@@ -1,22 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
+  fetch("http://localhost:3000/band_members").then( resp => {
+    return resp.json()
+  }).then( band_members => {
+    selectFantasyBand(band_members)
+  })
+
   let startBandForm = false
 
-  const startBandButton = document.querySelector("#name-and-select-band-button")
   const bandNameForm = document.querySelector("#band-name-form")
 
   const bandMembersContainer = document.querySelector(".all-band-members-container")
-  const bandForm = document.querySelector("#band-form")
 
-  bandForm.addEventListener("submit", (event) => {
+  const musiciansForm = document.querySelector("#band-form")
+
+  musiciansForm.addEventListener("submit", (event) => {
     event.preventDefault()
     submitBandForScore()
-    bandMembersContainer.innerHTML = ""
+    bandMembersContainer.style.display = "none"
   })
 
-
-  startBandButton.addEventListener("click", (event) => {
-    const bandName = document.querySelector("#band-name").value
+  bandNameForm.addEventListener("submit", (event) => {
     event.preventDefault()
+    const bandName = document.querySelector("#band-name").value
     if (bandName == "") {
       alert("You must enter your band name first!")
       return false
@@ -26,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   function searchForExistingBand(bandName) {
-  fetch(`http://localhost:3000/bands/${bandName}`)
+    fetch(`http://localhost:3000/bands/${bandName}`)
     .then((resp) => resp.json())
     .then((band) => {
       if(band) {
@@ -37,19 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-
   function startNewBand() {
-  startBandForm = !startBandForm
+    startBandForm = !startBandForm
     if (startBandForm) {
       bandMembersContainer.style.display = "block"
     } else {
       bandMembersContainer.style.display = "none"
     }
-    fetch("http://localhost:3000/band_members").then( resp => {
-      return resp.json()
-    }).then( band_members => {
-      selectFantasyBand(band_members)
-    })
   }
 
   function selectFantasyBand(band_members) {
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }).then(resp => resp.json())
     .then(band => {
       displayBandScore(band)
-      bandNameForm.innerHTML = ""
+      bandMembersContainer.style.display = "none"
     }).catch( error => {
       return error.message
     })
@@ -100,59 +99,64 @@ document.addEventListener("DOMContentLoaded", () => {
     bandDisplay.classList.add("bandDisplay")
     bandDisplay.id = `${band.id}`
     bandDisplay.innerHTML = `
-    <h1>${band.name}</h1>
-    <h2>Your Fantasy Band Score: ${band.total_band_skill} </h2>
+    <h2>*** Your Fantasy Band Score: <b>${band.total_band_skill}</b> ***</h2>
     <h3>
-    <u>Band Members</u>
+      <u>${band.name}</u>
     </h3>
     <ol>
-    <p>${band.guitarist.name} (from ${band.guitarist.original_band})</p>
-    <p>${band.bassist.name} (from ${band.bassist.original_band})</p>
-    <p>${band.pianist.name} (from ${band.pianist.original_band})</p>
-    <p>${band.singer.name} (from ${band.singer.original_band})</p>
-    <p>${band.drummer.name} (from ${band.drummer.original_band})</p>
+      <p>${band.guitarist.name} (from ${band.guitarist.original_band})</p>
+      <p>${band.bassist.name} (from ${band.bassist.original_band})</p>
+      <p>${band.pianist.name} (from ${band.pianist.original_band})</p>
+      <p>${band.singer.name} (from ${band.singer.original_band})</p>
+      <p>${band.drummer.name} (from ${band.drummer.original_band})</p>
     </ol>
-    <button id="edit-fantasy-band"> Edit Band </button>
-    <button id="create-new-band" type="button" onClick="window.location.reload()"> Enter A New Band </button>
-    <button id="delete-band-${band.id}" class="delete-btn" onClick="window.location.reload()"> Delete Band</button>
+    <button id="create-new-band" type="button"> Enter A New Band </button>
+    <button id="delete-band-${band.id}" class="delete-band-button"> Delete Band</button>
     `
     const bandDetails = document.querySelector("#fantasy-band-display")
     bandDetails.innerHTML = ""
     bandDetails.appendChild(bandDisplay)
-    bandNameForm.innerHTML = ""
+    bandNameForm.style.display = "none"
     listenToDeleteBandButton(band)
-    // listenToEditBandButton(band)
+    listenToNewBandButton(bandDisplay)
+  }
+
+  function listenToNewBandButton(bandDisplay) {
+    const newBandButton = document.querySelector("#create-new-band")
+    newBandButton.addEventListener("click", () => {
+      event.preventDefault()
+      bandDisplay.style.display = "none"
+      startBandForm = false
+      bandNameForm.style.display = "block"
+      showNameForm()
+    })
   }
 
   function listenToDeleteBandButton(band) {
     const deleteFantasyBandButton = document.querySelector(`#delete-band-${band.id}`)
     deleteFantasyBandButton.addEventListener("click", () => {
+      event.preventDefault()
+      startBandForm = false
+      bandNameForm.style.display = "block"
+      showNameForm()
       fetch(`http://localhost:3000/bands/${band.id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         }
-      }).then(resp =>  { resp.json()
+      }).then(resp => { resp.json()
       }).then( () => {
         deleteFantasyBandButton.parentElement.remove()
       })
     })
   }
+
+  function showNameForm() {
+    document.querySelector("#band-name-form").innerHTML = `
+    <input id="band-name" class="form-control" type="text" placeholder="Enter Band Name...">
+    <button id="name-and-select-band-button">Submit Your Fantasy Band Name</button>
+    `
+  }
+
 })
-
-  // function listenToEditBandButton(band) {
-  //   const updateFantasyBandButton = document.querySelector("#edit-fantasy-band")
-  //   updateFantasyBandButton.addEventListener("click", () => editFantasyBand(band))
-  // }
-
-  // function editFantasyBand(band) {
-  //   selectFantasyBand(band)
-    // fetch(`http://localhost:3000/bands/${band.id}/edit`, {
-    // method: "PATCH",
-    // headers: {
-    //   'Content-Type': 'application/json',
-    //   'Accept': 'application/json'
-    // },
-    //  body: JSON.stringify( {} )
-    // })

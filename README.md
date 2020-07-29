@@ -1,1 +1,9 @@
 # Fantasy Rockstars
+
+Welcome to the Fantasy Rock Star Game App. The app works best with a Google Chrome Browser. Also, I used Ruby version 2.6.1 when creating the app. Upon launching the app, run `bundle install` to make sure all gems and dependencies are accurate. The project is split into a frontend(Javascript) and backend(Rails) folder. Next, make sure to be in the backend folder and type `rails s` in the terminal to start the local server. Then, navigate to the front end folder. Type `open index.html` in the terminal to laungh the app in a browser.
+
+Now that the app is up and running, the fun begins. First, type a Fantasy Band name in the appropriate box (cannot be blank). Upon clicking on `Submit Your Fantasy Band Name`, one of two things will happen. If the name you typed already exist in the database, your band will display with the members you chose and that band's score (we'll get to scoring in a moment). Otherwise, five dropdown menus will appear for you to select musicians for your Fantasy Band.
+
+The dropdown menus are divided by instrument and consist of guitarists, bassists, singers, drummers, and pianist/keyboardist. Select a musician from each menu to create a band. On the back end, each musician has a skill score between 7 and 10. Once you have made your final choices in each category, click `See Your Fantasy Band Score` and the Fantasy Band you have chosen will appear.
+
+*** Hint: There is only ONE musician from each category that has a score of 10, meaning there is only one combination of musicians that can receive a perfect score of 50. Good luck finding out what band that is!

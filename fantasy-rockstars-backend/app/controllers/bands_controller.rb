@@ -5,7 +5,7 @@ class BandsController < ApplicationController
   end
 
   def show
-    band = Band.find_by(name: params[:id]) # a little confusing
+    band = Band.find_by(name: params[:name])
     render json: fantasy_band(band)
   end
 

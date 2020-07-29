@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Comic Sans MS";
+  text-align: center
 }
 
 #band-header {
@@ -16,22 +17,17 @@ body {
   width: auto;
 }
 
-/* .card {
-  text-align: center;
-  border: grey solid 1px;
-  padding: 1rem;
-  width: 15rem;
-  height: 25rem;
-  display: inline-grid;
-  margin: 1rem 2rem;
-  box-shadow: 3px 4px #e04b52
+h1 {
+  font-size: 4rem;
 }
 
-.band-avatar {
-  justify-self: center;
-  height: 12rem;
-  width: auto;
-} */
+b {
+  border-style: solid;
+  padding: .5rem;
+  color: whitesmoke;
+  background-color: rgb(2, 6, 124);
+}
+
 
 button {
   position: relative;
@@ -52,6 +48,36 @@ button:hover {
   border: black solid 1px;
   color: black;
 }
+
+.form-control {
+  border-radius: 5px;
+  height: 3rem;
+  width: 25%;
+  font-size: 18px;
+  font-family: "Comic Sans MS";
+  margin: 3px;
+}
+
+#band-name-form {
+  text-align: center
+}
+/* .card {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #e04b52
+}
+
+.band-avatar {
+  justify-self: center;
+  height: 12rem;
+  width: auto;
+} */
+
 
 /* .add-band-form {
   width: 80%
@@ -75,13 +101,3 @@ button:hover {
   border: #e04b52 solid 1px;
   color: #e04b52;
 } */
-
-
-.form-control {
-  border-radius: 5px;
-  height: 3rem;
-  width: 25%;
-  font-size: 18px;
-  font-family: "Comic Sans MS";
-  margin: 3px;
-}

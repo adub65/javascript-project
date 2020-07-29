@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let startBandForm = false
 
   const startBandButton = document.querySelector("#name-and-select-band-button")
+  const bandNameForm = document.querySelector("#band-name-form")
+
   const bandMembersContainer = document.querySelector(".all-band-members-container")
   const bandForm = document.querySelector("#band-form")
 
@@ -27,15 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch(`http://localhost:3000/bands/${bandName}`)
     .then((resp) => resp.json())
     .then((band) => {
-      if(band){
+      if(band) {
         displayBandScore(band)
       } else {
-        let recentBandDisplay = document.querySelector(".bandDisplay")
         startNewBand()
-        recentBandDisplay.innerHTML = ""
       }
     })
   }
+
 
   function startNewBand() {
   startBandForm = !startBandForm
@@ -88,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }).then(resp => resp.json())
     .then(band => {
       displayBandScore(band)
+      bandNameForm.innerHTML = ""
     }).catch( error => {
       return error.message
     })
@@ -111,20 +113,46 @@ document.addEventListener("DOMContentLoaded", () => {
     <p>${band.drummer.name} (from ${band.drummer.original_band})</p>
     </ol>
     <button id="edit-fantasy-band"> Edit Band </button>
-    <button id="create-new-band" type="button" onClick="window.location.reload()"> Create New Band </button>
+    <button id="create-new-band" type="button" onClick="window.location.reload()"> Enter A New Band </button>
+    <button id="delete-band-${band.id}" class="delete-btn" onClick="window.location.reload()"> Delete Band</button>
     `
     const bandDetails = document.querySelector("#fantasy-band-display")
     bandDetails.innerHTML = ""
     bandDetails.appendChild(bandDisplay)
-    listenToEditBandButton(band)
+    bandNameForm.innerHTML = ""
+    listenToDeleteBandButton(band)
+    // listenToEditBandButton(band)
   }
 
-  function listenToEditBandButton(band) {
-    const updateFantasyBandButton = document.querySelector("#edit-fantasy-band")
-    updateFantasyBandButton.addEventListener("click", () => editFantasyBand(band))
-  }
-
-  function editFantasyBand(band) {
-    console.log(band)
+  function listenToDeleteBandButton(band) {
+    const deleteFantasyBandButton = document.querySelector(`#delete-band-${band.id}`)
+    deleteFantasyBandButton.addEventListener("click", () => {
+      fetch(`http://localhost:3000/bands/${band.id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+      }).then(resp =>  { resp.json()
+      }).then( () => {
+        deleteFantasyBandButton.parentElement.remove()
+      })
+    })
   }
 })
+
+  // function listenToEditBandButton(band) {
+  //   const updateFantasyBandButton = document.querySelector("#edit-fantasy-band")
+  //   updateFantasyBandButton.addEventListener("click", () => editFantasyBand(band))
+  // }
+
+  // function editFantasyBand(band) {
+  //   selectFantasyBand(band)
+    // fetch(`http://localhost:3000/bands/${band.id}/edit`, {
+    // method: "PATCH",
+    // headers: {
+    //   'Content-Type': 'application/json',
+    //   'Accept': 'application/json'
+    // },
+    //  body: JSON.stringify( {} )
+    // })

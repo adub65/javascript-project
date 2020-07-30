@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:3000/band_members").then( resp => {
+  fetch("http://localhost:3000/band_members")
+  .then( resp => {
     return resp.json()
   }).then( band_members => {
     selectFantasyBand(band_members)
@@ -8,16 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let startBandForm = false
 
   const bandNameForm = document.querySelector("#band-name-form")
-
   const bandMembersContainer = document.querySelector(".all-band-members-container")
-
   const musiciansForm = document.querySelector("#band-form")
 
-  musiciansForm.addEventListener("submit", (event) => {
-    event.preventDefault()
-    submitBandForScore()
-    bandMembersContainer.style.display = "none"
-  })
 
   bandNameForm.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -27,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return false
     } else {
       searchForExistingBand(bandName)
+      bandNameForm.style.display = "none"
     }
   })
 
@@ -41,6 +36,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   }
+
+  musiciansForm.addEventListener("submit", (event) => {
+    event.preventDefault()
+    // bandMembersContainer.style.display = "none"
+    let values = document.querySelectorAll("select").values()
+    for (const select of values) {
+      if (!select.value) {
+        alert("You must select a musician for each position!")
+        return false
+      }
+        submitBandForScore()
+        select.value = ""
+    }
+  })
 
   function startNewBand() {
     startBandForm = !startBandForm
@@ -85,12 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
         singer_id: form.singer.value,
         pianist_id: form.pianist.value
       })
-    }).then(resp => resp.json())
-    .then(band => {
-      displayBandScore(band)
-      bandMembersContainer.style.display = "none"
-    }).catch( error => {
+    }).then(resp => {
+      return resp.json()
+    }).catch(error => {
       return error.message
+    }).then(band => {
+        displayBandScore(band)
+        bandMembersContainer.style.display = "none"
     })
   }
 
@@ -124,21 +134,22 @@ document.addEventListener("DOMContentLoaded", () => {
   function listenToNewBandButton(bandDisplay) {
     const newBandButton = document.querySelector("#create-new-band")
     newBandButton.addEventListener("click", () => {
-      event.preventDefault()
       bandDisplay.style.display = "none"
-      startBandForm = false
-      bandNameForm.style.display = "block"
-      showNameForm()
+      resetNameForm()
     })
+  }
+
+  function resetNameForm() {
+    event.preventDefault()
+    startBandForm = false
+    bandNameForm.style.display = "block"
+    showNameForm()
   }
 
   function listenToDeleteBandButton(band) {
     const deleteFantasyBandButton = document.querySelector(`#delete-band-${band.id}`)
     deleteFantasyBandButton.addEventListener("click", () => {
-      event.preventDefault()
-      startBandForm = false
-      bandNameForm.style.display = "block"
-      showNameForm()
+      resetNameForm()
       fetch(`http://localhost:3000/bands/${band.id}`, {
         method: "DELETE",
         headers: {
@@ -158,5 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
     <button id="name-and-select-band-button">Submit Your Fantasy Band Name</button>
     `
   }
+
 
 })

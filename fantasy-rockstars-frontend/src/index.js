@@ -66,7 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
       nameHeader.innerHTML = ""
       nameHeader.id = "bandName"
       bandMembersContainer.prepend(nameHeader)
-      nameHeader.innerHTML = `<h2>${bandName}</h2>`
+      nameHeader.innerHTML = `
+        <p> There is only one band combination that is a perfect score of <u>50</u>. </p>
+        <p> Can you select the correct members? </p>
+        <h2>Your Fantasy Band name is ${bandName} </h2>
+        `
+
       bandMembersContainer.style.display = "block"
     } else {
       bandMembersContainer.style.display = "none"
@@ -129,10 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <u>${band.name}</u>
     </h3>
     <ol>
-      <p>${band.guitarist.name} (from ${band.guitarist.original_band})</p>
-      <p>${band.bassist.name} (from ${band.bassist.original_band})</p>
-      <p>${band.pianist.name} (from ${band.pianist.original_band})</p>
       <p>${band.singer.name} (from ${band.singer.original_band})</p>
+      <p>${band.guitarist.name} (from ${band.guitarist.original_band})</p>
+      <p>${band.pianist.name} (from ${band.pianist.original_band})</p>
+      <p>${band.bassist.name} (from ${band.bassist.original_band})</p>
       <p>${band.drummer.name} (from ${band.drummer.original_band})</p>
     </ol>
     <button id="create-new-band" type="button"> Enter A New Band </button>

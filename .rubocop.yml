@@ -1,71 +1,72 @@
 require:
-  - rubocop-performance
+  - "rubocop-performance"
 
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.6.1
   Exclude:
-    - 'spec/*'
-    - 'spec/**/*'
-    - 'vendor/**/*'
-    - 'db/schema.rb'
-    - 'config/**'
-    - 'config/**/*'
-    - 'bin/**'
+    - "spec/*"
+    - "spec/**/*"
+    - "vendor/**/*"
+    - "db/schema.rb"
+    - "config/**"
+    - "config/**/*"
+    - "bin/**"
 
-# Lint/DuplicateElsifCondition:
-#   Enabled: false
+#-----------------------------------
+Lint/DuplicateElsifCondition:
+  Enabled: false
 
-# Style/AccessorGrouping:
-#   Enabled: false
+Style/AccessorGrouping:
+  Enabled: false
 
-# Style/ArrayCoercion:
-#   Enabled: false
+Style/ArrayCoercion:
+  Enabled: false
 
-# Style/BisectedAttrAccessor:
-#   Enabled: false
+Style/BisectedAttrAccessor:
+  Enabled: false
 
-# Style/CaseLikeIf:
-#   Enabled: false
+Style/CaseLikeIf:
+  Enabled: false
 
-# Style/HashAsLastArrayItem:
-#   Enabled: false
+Style/HashAsLastArrayItem:
+  Enabled: false
 
-# Style/HashLikeCase:
-#   Enabled: false
+Style/HashLikeCase:
+  Enabled: false
 
-# Style/RedundantAssignment:
-#   Enabled: false
+Style/RedundantAssignment:
+  Enabled: false
 
-# Style/RedundantFetchBlock:
-#   Enabled: false
+Style/RedundantFetchBlock:
+  Enabled: false
 
-# Style/RedundantFileExtensionInRequire:
-#   Enabled: false
+Style/RedundantFileExtensionInRequire:
+  Enabled: false
 
-# Performance/AncestorsInclude:
-#   Enabled: false
+Performance/AncestorsInclude:
+  Enabled: false
 
-# Performance/BigDecimalWithNumericArgument:
-#   Enabled: false
+Performance/BigDecimalWithNumericArgument:
+  Enabled: false
 
-# Performance/RedundantSortBlock:
-#   Enabled: false
+Performance/RedundantSortBlock:
+  Enabled: false
 
-# Performance/RedundantStringChars:
-#   Enabled: false
+Performance/RedundantStringChars:
+  Enabled: false
 
-# Performance/ReverseFirst:
-#   Enabled: false
+Performance/ReverseFirst:
+  Enabled: false
 
-# Performance/SortReverse:
-#   Enabled: false
+Performance/SortReverse:
+  Enabled: false
 
-# Performance/Squeeze:
-#   Enabled: false
+Performance/Squeeze:
+  Enabled: false
 
-# Performance/StringInclude:
-#   Enabled: false
-
+Performance/StringInclude:
+  Enabled: false
+# ---------------------------------------
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
 
@@ -119,8 +120,8 @@ Metrics/PerceivedComplexity:
 
 Naming/FileName:
   Exclude:
-    - 'Guardfile'
-    - 'Capfile'
+    - "Guardfile"
+    - "Capfile"
 
 Naming/MethodParameterName:
   AllowedNames:
@@ -128,7 +129,7 @@ Naming/MethodParameterName:
     - id
     - to
     - by
-    - 'on'
+    - "on"
     - in
     - at
 

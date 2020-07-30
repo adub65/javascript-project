@@ -6,13 +6,8 @@ class Band < ApplicationRecord
   belongs_to :pianist, -> { where(instrument: "piano") }, class_name: "BandMember", foreign_key: :pianist_id
 
   validates :name, presence: true, uniqueness: true
-  
+
   def total_band_skill
     bassist.skill_points + guitarist.skill_points + pianist.skill_points + drummer.skill_points + singer.skill_points
   end
 end
-
-
-
-# adjust fetc hto no longer create a band, and instead, just GET all of the band_members
-# append band members to DOM in the appropriate dropdowns

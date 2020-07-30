@@ -9,9 +9,7 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
-
 ActiveRecord::Schema.define(version: 2) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,5 +28,4 @@ ActiveRecord::Schema.define(version: 2) do
     t.integer "drummer_id"
     t.integer "singer_id"
   end
-
 end

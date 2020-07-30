@@ -32,28 +32,41 @@ document.addEventListener("DOMContentLoaded", () => {
       if(band) {
         displayBandScore(band)
       } else {
-        startNewBand()
+        startNewBand(bandName)
       }
     })
   }
 
   musiciansForm.addEventListener("submit", (event) => {
     event.preventDefault()
-    // bandMembersContainer.style.display = "none"
     let values = document.querySelectorAll("select").values()
     for (const select of values) {
       if (!select.value) {
         alert("You must select a musician for each position!")
+        resetSelects()
         return false
       }
-        submitBandForScore()
-        select.value = ""
     }
+    submitBandForScore()
+    resetSelects()
   })
 
-  function startNewBand() {
+  function resetSelects() {
+    let values = document.querySelectorAll("select").values()
+    for (const select of values) {
+      select.value = ""
+    }
+  }
+
+  function startNewBand(bandName) {
     startBandForm = !startBandForm
     if (startBandForm) {
+
+      const nameHeader = document.querySelector("#bandName") ||document.createElement("div")
+      nameHeader.innerHTML = ""
+      nameHeader.id = "bandName"
+      bandMembersContainer.prepend(nameHeader)
+      nameHeader.innerHTML = `<h2>${bandName}</h2>`
       bandMembersContainer.style.display = "block"
     } else {
       bandMembersContainer.style.display = "none"
@@ -79,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function submitBandForScore() {
     const fantasyBandNameElement = document.querySelector("#band-name").value
+
     const form = event.target
     fetch("http://localhost:3000/bands", {
       method: "POST",
@@ -96,11 +110,12 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     }).then(resp => {
       return resp.json()
-    }).catch(error => {
-      return error.message
     }).then(band => {
+      console.log(band)
         displayBandScore(band)
         bandMembersContainer.style.display = "none"
+    }).catch(error => {
+      return error.message
     })
   }
 
